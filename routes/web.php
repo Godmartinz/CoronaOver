@@ -22,7 +22,7 @@ $guessEntries =App\GuessEntries::latest()->get();
 
 });
 
-Route::post('/', 'GuessEntriesController@create');
+Route::post('/guess/create', 'GuessEntriesController@create');
 
 
 

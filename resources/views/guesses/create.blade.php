@@ -1,6 +1,6 @@
 @extends('layout')
 <div id="mc_embed_signup">
-    <form action="/guesses/create" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <form action="/guess/create" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
         <input type="email" value="" name="name" class="email" id="mce-EMAIL" placeholder="Name" required>
         <input type="date" value="" name="date" class="date" id="mce-EMAIL" placeholder="Date" required>

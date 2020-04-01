@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\GuessEntries;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class GuessEntriesController extends Controller
 {
+
     public function show($id)
     {
         if (!empty($id)) {
@@ -17,27 +19,27 @@ class GuessEntriesController extends Controller
             return redirect("index")->with('error', 'auth.screen-name');
     }
 
-    public function create(){
-    return view('guesses.create');
+    public function create()
+    {
+        return view('guess.create');
     }
-    public function store(){
-      dump(request()->all());
-        $guess= new guess_entries();
 
+    public function store(){
+      dump(Request()->all());
+
+      $guess= new GuessEntries();
       $guess->name = request('name');
       $guess->guess_date = request('guess_date');
-      $guess->created_at = request('created_at');
-
+      $guess->created_at = Carbon::now()->isoFormat('MMM Do YY');
       $guess-> save();
     }
     public function edit(){
 
     }
     public function update($id){
-        request()->validate([
+        request($id)->validate([
             'name'=> 'required',
             'guess_date'=> 'required'
-
         ]);
     }
     public function destroy(){
@@ -46,7 +48,7 @@ class GuessEntriesController extends Controller
     public function index(){
         $guessEntries=GuessEntries::latest()->get();
 
-        return view('index', ['guessEntries'=>$guessEntries]);
+        return view('guess.index',[$guessEntries=='$guessEntries']);
 
 
     }

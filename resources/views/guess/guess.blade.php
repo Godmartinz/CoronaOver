@@ -21,9 +21,9 @@
             <a class="menu-btn" href="#" title="Hide navigation">Hide navigation</a>
 
             <ul id="nav" class="nav">
-                <li class={{Request::path() === 'index' ? 'current_page_item' : ''}}><a class="smoothscroll" href="#Home">Home</a></li>
-                <li class={{Request::path() === 'index' ? 'current_page_item' : ''}}><a class="smoothscroll" href="#About">Guesses</a></li>
-                <li class={{Request::path() === 'index' ? 'current_page_item' : ''}}><a class="smoothscroll" href="#Stats">Stats</a></li>
+                <li class={{Request::path() === 'guess.index' ? 'current_page_item' : ''}}><a class="smoothscroll" href="#Home">Home</a></li>
+                <li class={{Request::path() === 'guess.create' ? 'current_page_item' : ''}}><a class="smoothscroll" href="#About">Guesses</a></li>
+                <li class={{Request::path() === 'guess.guess' ? 'current_page_item' : ''}}><a class="smoothscroll" href="#Stats">Stats</a></li>
             </ul> <!-- end #nav -->
 
         </nav> <!-- end #nav-wrap -->
@@ -37,7 +37,8 @@
             <br>
             <h1>Do you know when the world is going to start up again?</h1>
 
-            <p>Good because I don't and I need answers! Guess which date social distancing will be over... The sooner the better but no rush--I would prefer you get your answer right then wrong.  </p>
+            <p>Good because I don't and I need answers! Guess which date social distancing will be over...
+                The sooner the better but no rush--I would prefer we get it right rather than wrong.  </p>
 
             <h5>-Time left until social distancing is over-</h5>
 
@@ -49,7 +50,7 @@
             </div>
 
 
-      @include('guesses.create')
+      @include('guess.create')
 
 
 
@@ -63,7 +64,7 @@
 <!-- Guess List Section
 ================================================== -->
 
-@include('guesses.guesses')
+@include('guess.guess')
 
 <!-- About Section End-->
 

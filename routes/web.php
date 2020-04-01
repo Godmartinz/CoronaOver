@@ -17,8 +17,8 @@ Route::get('/', function(){
 });
 
 Route::get('/guess','GuessEntriesController@index');
-Route::post('/guess', 'GuessEntriesController@store');
-Route::get('/guess/create', 'GuessEntriesController@create');
+Route::get('/guess', 'GuessEntriesController@create');
+Route::post('/guess/create', 'GuessEntriesController@store');
 Route::get('/guess/show{id}', 'GuessEntriesController@show');
 
 

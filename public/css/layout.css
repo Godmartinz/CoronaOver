@@ -236,6 +236,16 @@ ul#nav li.current a { color: #1E732D; }
 	display: inline-block;
 	float: left;
 }
+#mc-embedded-subscribe-form #name input[type="email"] {
+    font-size: 15px;
+    height: 54px;
+    line-height: 30px;
+    padding: 12px 15px;
+    border-radius: 3px 0 0 3px;
+    background: #727272;
+    background: rgba(255, 255, 255, .2);
+    width: 70%;
+}
 #main #mc_embed_signup input[type="email"] {
 	font-size: 15px;
 	height: 54px;

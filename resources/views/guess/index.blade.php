@@ -16,16 +16,15 @@
         </div>
 
     </div> <!-- end section-header -->
-    @foreach($guessEntries as $guess)
+
     <div class="row section-content">
 
         <div class="six columns">
-        <h3>{{$guess->name}}</h3>
+        <h3>Name</h3>
 
-        <p>{{$guess->guess_date}}
-        </p>
+        <p>date</p>
     </div>
-    @endforeach
+
     <div class="six columns">
         <h3>Our Approach.</h3>
 

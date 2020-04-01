@@ -25,13 +25,13 @@ class GuessEntriesController extends Controller
     }
 
     public function store(){
-      dump(Request()->all());
 
       $guess= new GuessEntries();
       $guess->name = request('name');
       $guess->guess_date = request('guess_date');
       $guess->created_at = Carbon::now()->isoFormat('MMM Do YY');
       $guess-> save();
+
     }
     public function edit(){
 
@@ -48,7 +48,7 @@ class GuessEntriesController extends Controller
     public function index(){
         $guessEntries=GuessEntries::latest()->get();
 
-        return view('guess.index',['guessEntries'=> $guessEntries]);
+        return view('guess.index',compact('guessEntries'));
 
 
     }

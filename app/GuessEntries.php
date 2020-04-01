@@ -11,10 +11,12 @@ class GuessEntries extends Model
     use ValidatingTrait;
     protected $rules = [
         'name' => 'required|unique',
-        'guess_date' => 'required|date'
+        'guess_date' => 'required|date',
+        'created_at' => 'required|date'
     ];
     protected $fillable = [
         'name',
-        'guess_date '
+        'guess_date',
+        'created_at'
     ];
 }

@@ -48,7 +48,7 @@ class GuessEntriesController extends Controller
     public function index(){
         $guessEntries=GuessEntries::latest()->get();
 
-        return view('guess.index',[$guessEntries=='$guessEntries']);
+        return view('guess.index',['guessEntries'=> $guessEntries]);
 
 
     }

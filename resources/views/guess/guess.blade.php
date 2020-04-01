@@ -10,7 +10,6 @@
 <!-- Intro Section
 ================================================== -->
 <section id="intro">
-
     <header class="row">
 
 
@@ -21,9 +20,8 @@
             <a class="menu-btn" href="#" title="Hide navigation">Hide navigation</a>
 
             <ul id="nav" class="nav">
-                <li class={{Request::path() === 'guess.index' ? 'current_page_item' : ''}}><a class="smoothscroll" href="#Home">Home</a></li>
-                <li class={{Request::path() === 'guess.create' ? 'current_page_item' : ''}}><a class="smoothscroll" href="#About">Guesses</a></li>
-                <li class={{Request::path() === 'guess.guess' ? 'current_page_item' : ''}}><a class="smoothscroll" href="#Stats">Stats</a></li>
+                <li><a class="smoothscroll" href="#Guesses">Guesses</a></li>
+                <li><a class="smoothscroll" href="#Stats">Stats</a></li>
             </ul> <!-- end #nav -->
 
         </nav> <!-- end #nav-wrap -->
@@ -63,11 +61,32 @@
 
 <!-- Guess List Section
 ================================================== -->
+<section id="Guesses">
+    @include('guess.index')
+</section>
 
-@include('guess.guess')
 
 <!-- About Section End-->
 
+<!-- footer ================================================== -->
+<footer>
+
+    <div class="row">
+
+        <div class="twelve columns">
+
+            <ul class="copyright">
+                <li>&copy; Copyright 2014 Zoon</li>
+                <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#intro"><i class="icon-up-open"></i></a></div>
+
+</footer> <!-- Footer End-->
 
 
 

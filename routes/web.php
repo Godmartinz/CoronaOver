@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function(){
-    return view('guess');
+    return view('guess.guess');
 });
+
 Route::get('/guess','GuessEntriesController@index');
 Route::post('/guess', 'GuessEntriesController@store');
-Route::post('/guess/create', 'GuessEntriesController@create');
+Route::get('/guess/create', 'GuessEntriesController@create');
 Route::get('/guess/show{id}', 'GuessEntriesController@show');
 
 

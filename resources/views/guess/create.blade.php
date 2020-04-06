@@ -8,7 +8,7 @@
     </div>
 </div>
 <div class="field">
-    <label class="label" for="guess date">Guess Date (YYYY-MM-DD)</label>
+    <label class="label" for="guess_date">Guess Date (YYYY-MM-DD)</label>
         <input name="guess_date" type="date" value="{{ old('guess_date') }}">
 </div>
 

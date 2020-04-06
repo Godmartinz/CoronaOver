@@ -24,7 +24,11 @@ class CreateGuessEntriesTable extends Migration
 
             // Since you're creating it as a regular timestamp here, you miss out
             // on the auto-updating part and have to remember to set it maually.
-            $table->timestamp('created_at');
+            // Previously:
+            // $table->timestamp('created_at');
+
+            $table->timestamps();
+
         });
     }
 

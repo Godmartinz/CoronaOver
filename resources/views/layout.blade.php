@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/media-queries.css">
     <link rel="stylesheet" href="css/clockcountdown.css">
+
+    <!-- this file isn't in the code base so it's throwing an error. -->
     <link href="~bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet">
 {{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">--}}
 
@@ -50,6 +52,8 @@
 <script src="js/backstretch.js"></script>
 <script src="js/init.js"></script>
 <script src="js/clockcountdown.js"></script>
+
+<!-- neither is this one -->
 <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
 
 </html>

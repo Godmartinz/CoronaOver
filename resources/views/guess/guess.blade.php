@@ -40,6 +40,10 @@
 
             <h5>-Time left until social distancing is over-</h5>
 
+
+
+
+
             <div id="clockdiv">
                 <div>
                     <span class="days"></span>
@@ -91,8 +95,8 @@
         <div class="twelve columns">
 
             <ul class="copyright">
-                <li>&copy; Copyright 2014 Zoon</li>
-                <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
+                <li>&copy; Copyright {{ date("Y'")  }} </li>
+                <li>Design by <a href="http://www.styleshout.com/">Styleshout</a></li>
             </ul>
 
         </div>

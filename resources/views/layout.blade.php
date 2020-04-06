@@ -17,10 +17,10 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="css/clockcountdown.css">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/media-queries.css">
+    <link rel="stylesheet" href="/css/clockcountdown.css">
 
     <!-- this file isn't in the code base so it's throwing an error. -->
     <link href="~bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet">
@@ -28,11 +28,11 @@
 
     <!-- Script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
+    <script src="/js/modernizr.js"></script>
 
     <!-- Favicons
      ================================================== -->
-    <link rel="shortcut icon" href="favicon.png" >
+    <link rel="shortcut icon" href="/favicon.png" >
 
 </head>
 
@@ -41,17 +41,17 @@
 <!-- Java Script
 ================================================== -->
 
-<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
 
 
-<script src="js/gmaps.js"></script>
-<script src="js/waypoints.js"></script>
-<script src="js/jquery.countdown.js"></script>
-<script src="js/jquery.placeholder.js"></script>
-<script src="js/backstretch.js"></script>
-<script src="js/init.js"></script>
-<script src="js/clockcountdown.js"></script>
+<script src="/js/gmaps.js"></script>
+<script src="/js/waypoints.js"></script>
+<script src="/js/jquery.countdown.js"></script>
+<script src="/js/jquery.placeholder.js"></script>
+<script src="/js/backstretch.js"></script>
+<script src="/js/init.js"></script>
+<script src="/js/clockcountdown.js"></script>
 
 <!-- neither is this one -->
 <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>

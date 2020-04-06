@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/clockcountdown.css">
+    <link href="~bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet">
+{{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">--}}
 
     <!-- Script
     ================================================== -->
@@ -35,17 +38,18 @@
 
 <!-- Java Script
 ================================================== -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
 <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 
-<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+
 <script src="js/gmaps.js"></script>
 <script src="js/waypoints.js"></script>
 <script src="js/jquery.countdown.js"></script>
 <script src="js/jquery.placeholder.js"></script>
 <script src="js/backstretch.js"></script>
 <script src="js/init.js"></script>
-
+<script src="js/clockcountdown.js"></script>
+<script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
 
 </html>

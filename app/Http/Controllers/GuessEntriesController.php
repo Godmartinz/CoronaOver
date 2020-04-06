@@ -31,6 +31,7 @@ class GuessEntriesController extends Controller
       $guess->guess_date = request('guess_date');
       $guess->created_at = Carbon::now()->isoFormat('MMM Do YY');
       $guess-> save();
+      redirect('guess.guess');
 
     }
     public function edit(){

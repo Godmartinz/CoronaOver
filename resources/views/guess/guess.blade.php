@@ -40,12 +40,27 @@
 
             <h5>-Time left until social distancing is over-</h5>
 
-            <div id="counter" class="cf">
-                <span>134 <em>days</em></span>
-                <span>12 <em>hours</em></span>
-                <span>50 <em>minutes</em></span>
-                <span>33 <em>seconds</em></span>
+            <div id="clockdiv">
+                <div>
+                    <span class="days"></span>
+                    <div class="smalltext">Days</div>
+                </div>
+                <div>
+                    <span class="hours"></span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                    <span class="minutes"></span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span class="seconds"></span>
+                    <div class="smalltext">Seconds</div>
+                </div>
             </div>
+
+
+
 
 
       @include('guess.create')

@@ -1,12 +1,6 @@
-@extends ('layout')
-<body>
+@extends ('layouts.layout')
 
-<div id="preloader">
-    <div id="status">
-        <img src="images/preloader.gif" height="64" width="64" alt="">
-    </div>
-</div>
-
+@section('content')
 <!-- Intro Section
 ================================================== -->
 <section id="intro">
@@ -40,6 +34,10 @@
 
             <h5>-Time left until social distancing is over-</h5>
 
+
+
+
+
             <div id="clockdiv">
                 <div>
                     <span class="days"></span>
@@ -63,7 +61,7 @@
 
 
 
-      @include('guess.create')
+      @include('create')
 
 
 
@@ -73,36 +71,10 @@
 
 </section> <!-- end intro section -->
 
-
+@section('content')
 <!-- Guess List Section
 ================================================== -->
 <section id="Guesses">
-    @include('guess.index')
+    @include('guesses')
 </section>
 
-
-<!-- About Section End-->
-
-<!-- footer ================================================== -->
-<footer>
-
-    <div class="row">
-
-        <div class="twelve columns">
-
-            <ul class="copyright">
-                <li>&copy; Copyright 2014 Zoon</li>
-                <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
-            </ul>
-
-        </div>
-
-    </div>
-
-    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#intro"><i class="icon-up-open"></i></a></div>
-
-</footer> <!-- Footer End-->
-
-
-
-</body>

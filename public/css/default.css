@@ -593,12 +593,12 @@ label,
 legend {
    font: 16px/24px 'montserrat-bold', sans-serif;
 	margin: 12px 0;
-   color: #3d4145;
+   color: #ffffff;
    display: block;
 }
 label span,
 legend span {
-	color: #8B9798;
+	color: #ffffff;
    font: 14px/24px 'merriweather-regular', sans-serif;
 }
 

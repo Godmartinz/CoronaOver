@@ -17,7 +17,18 @@ class CreateGuessEntriesTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->date('guess_date');
-            $table->timestamp('created_at');
+
+            // You should probably have used
+            // $table->timestamps() here, as those are magical laravel properties
+            // which ensure they'll always be updated/created when things are saved.
+
+            // Since you're creating it as a regular timestamp here, you miss out
+            // on the auto-updating part and have to remember to set it maually.
+            // Previously:
+            // $table->timestamp('created_at');
+
+            $table->timestamps();
+
         });
     }
 

@@ -12,17 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(){
-    return view('guess.guess');
-});
-
-Route::get('/guess','GuessEntriesController@index');
-Route::get('/guess', 'GuessEntriesController@create');
-Route::post('/guess/create', 'GuessEntriesController@store');
-Route::get('/guess/show{id}', 'GuessEntriesController@show');
 
 
 
+Route::get('/',['as' => 'home','uses' => 'GuessEntriesController@index']);
+Route::post('/guess/create',['as' => 'guess.store','uses' => 'GuessEntriesController@store']);
+Route::get('/guess/{id}',['as' => 'guess.show','uses' => 'GuessEntriesController@show']);
 
 
 

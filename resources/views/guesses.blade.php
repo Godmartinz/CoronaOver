@@ -1,4 +1,4 @@
-@extends ('layouts.layout')
+
 <!-- Guess List Section
 ================================================== -->
 <section id="about">
@@ -25,7 +25,7 @@
             <h3>Date</h3>
         </div>
 
-        @if (($guessEntries) && ($guessEntries->count() > 0))
+        @if ((isset($guessEntries)) && ($guessEntries->count() > 0))
             @foreach ($guessEntries as $guessEntry)
                 <div class="six columns">
                     <h3>{{ $guessEntry->name }}</h3>

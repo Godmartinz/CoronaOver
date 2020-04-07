@@ -1,5 +1,5 @@
-@extends('layouts.layout')
-<form method="POST" action="{{ route('guess.create') }}">
+
+<form method="POST" action="{{ route('guess.store') }}">
     @csrf
 <div class="field">
     <label class="label">Screen Name</label>

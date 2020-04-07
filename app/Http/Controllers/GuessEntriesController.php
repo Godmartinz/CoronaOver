@@ -24,19 +24,47 @@ class GuessEntriesController extends Controller
         return view('guess.create');
     }
 
-    public function store(){
+    public function store()
+    {
 
+      \Log::debug('trying to save');
       $guess= new GuessEntries();
       $guess->name = request('name');
-      $guess->guess_date = request('guess_date');
-      $guess->created_at = Carbon::now()->isoFormat('MMM Do YY');
-      $guess-> save();
-      redirect('guess.guess');
+
+      \Log::debug('Guess: '.request('guess_date'));
+
+      // We have to use Carbon here to normalize the date into a MySQL compatible date format, like YYYY-mm-dd
+      $guess->guess_date = Carbon::parse( request('guess_date'))->format('Y-m-d');
+
+
+      // Check to see if the object was saved
+      if ($guess->save()) {
+
+          \Log::debug('Saving.... ');
+
+          // This was previously trying to redirect to a blade: redirect('guess.guess').
+          // You want to redirect to a named
+          // route OR return a view.
+
+          // Also you always have to use `return` in order for either of those things to actually happen.
+          return redirect(route('guess.guess'));
+      }
+
+
+      // Validation failed, so let's return the user back with any relevant errors and their input already populated
+      \Log::debug('Could not save: '.$guess->getErrors());
+      return redirect()->back()
+          ->withErrors($guess->getErrors())
+          ->withInput();;
 
     }
+
+
     public function edit(){
 
     }
+
+
     public function update($id){
         request($id)->validate([
             'name'=> 'required',
@@ -47,7 +75,7 @@ class GuessEntriesController extends Controller
 
     }
     public function index(){
-        $guessEntries=GuessEntries::latest()->get();
+        $guessEntries = GuessEntries::latest()->get();
 
         return view('guess.index',compact('guessEntries'));
 

@@ -19,7 +19,7 @@ Route::get('/', function(){
 })->name('home');
 
 Route::post('/guess/create',['as' => 'guess.store','uses' => 'GuessEntriesController@store']);
-Route::post('/guess/{id}',['as' => 'guess.show','uses' => 'GuessEntriesController@show']);
+Route::get('/guess/{id}',['as' => 'guess.show','uses' => 'GuessEntriesController@show']);
 
 
 

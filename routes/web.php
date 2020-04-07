@@ -15,14 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function(){
-    return view('guess.guess');
+    return view('index');
 })->name('home');
 
-
-// This route is redundent, no? - AG
-Route::get('/guess',['as' => 'guess.show','uses' => 'GuessEntriesController@index']);
-
-Route::get('/guess/create',['as' => 'guess.create','uses' => 'GuessEntriesController@create']);
 Route::post('/guess/create',['as' => 'guess.store','uses' => 'GuessEntriesController@store']);
 Route::post('/guess/{id}',['as' => 'guess.show','uses' => 'GuessEntriesController@show']);
 

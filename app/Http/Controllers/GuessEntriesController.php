@@ -9,6 +9,7 @@ use Carbon\Carbon;
 class GuessEntriesController extends Controller
 {
 
+
     public function show($id)
     {
         if (!empty($id)) {
@@ -16,12 +17,14 @@ class GuessEntriesController extends Controller
 
             return view('index', $guess);
         }
+            // Not sure what this is here for? If you're checking for auth, you'd want to use
+            // middleware, not this in the controller
             return redirect("index")->with('error', 'auth.screen-name');
     }
 
     public function create()
     {
-        return view('guess.create');
+        return view('create');
     }
 
     public function store()
@@ -47,7 +50,7 @@ class GuessEntriesController extends Controller
           // route OR return a view.
 
           // Also you always have to use `return` in order for either of those things to actually happen.
-          return redirect(route('guess.guess'));
+          return redirect(route('home'));
       }
 
 
@@ -66,6 +69,9 @@ class GuessEntriesController extends Controller
 
 
     public function update($id){
+
+        // You don't need to run a validator here, since you're using model-level validation
+
         request($id)->validate([
             'name'=> 'required',
             'guess_date'=> 'required'
@@ -74,10 +80,17 @@ class GuessEntriesController extends Controller
     public function destroy(){
 
     }
-    public function index(){
-        $guessEntries = GuessEntries::latest()->get();
 
-        return view('guess.index',compact('guessEntries'));
+
+    public function index(){
+
+        \Log::debug('loading the index...');
+
+        $guessEntries = GuessEntries::get();
+
+        \Log::debug(print_r($guessEntries, true));
+
+        return view('index')->with('guessEntries', $guessEntries);
 
 
     }

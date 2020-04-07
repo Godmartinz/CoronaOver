@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 <form method="POST" action="{{ route('guess.create') }}">
     @csrf
 <div class="field">

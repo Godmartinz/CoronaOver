@@ -1,4 +1,4 @@
-@extends ('layout')
+@extends ('layouts.layout')
 <body>
 
 <div id="preloader">
@@ -67,7 +67,7 @@
 
 
 
-      @include('guess.create')
+      @include('create')
 
 
 
@@ -81,7 +81,7 @@
 <!-- Guess List Section
 ================================================== -->
 <section id="Guesses">
-    @include('guess.index')
+    @include('guesses')
 </section>
 
 

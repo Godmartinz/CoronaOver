@@ -14,8 +14,8 @@
             <a class="menu-btn" href="#" title="Hide navigation">Hide navigation</a>
 
             <ul id="nav" class="nav">
-                <li><a class="smoothscroll" href="#Guesses">Guesses</a></li>
-                <li><a class="smoothscroll" href="#Stats">Stats</a></li>
+                <li><a class="smoothscroll" href="#guesses">Guesses</a></li>
+
             </ul> <!-- end #nav -->
 
         </nav> <!-- end #nav-wrap -->
@@ -32,7 +32,7 @@
             <p>Good because I don't and I need answers! Guess which date social distancing will be over...
                 The sooner the better but no rush--I would prefer we get it right rather than wrong.  </p>
 
-            <h5>-Time left until social distancing is over-</h5>
+            <h5>-Its going to end before this clock reaches zero.-</h5>
 
 
 
@@ -72,6 +72,7 @@
 </section> <!-- end intro section -->
 
 @section('content')
+    <a name="guesses"></a>
 <!-- Guess List Section
 ================================================== -->
 <section id="Guesses">

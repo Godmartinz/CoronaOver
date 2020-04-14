@@ -1,7 +1,7 @@
 
 <!-- Guess List Section
 ================================================== -->
-<section id="about">
+<div id="about">
 
     <div class="row section-header">
 
@@ -19,10 +19,10 @@
 
     <div class="row section-content">
         <div class="six columns">
-            <h3>Name</h3>
+            <h4>Name</h4>
         </div>
         <div class="six columns">
-            <h3>Date</h3>
+            <h4>Date</h4>
         </div>
 
         @if ((isset($guessEntries)) && ($guessEntries->count() > 0))
@@ -31,10 +31,15 @@
                     <h3>{{ $guessEntry->name }}</h3>
                 </div>
                 <div class="six columns">
-                    <h3>{{ $guessEntry->guess_date }}</h3>
+                    <h3>{{ date('M-d-y', strtotime($guessEntry->guess_date)) }}</h3>
                 </div>
+
             @endforeach
+                <div class="six columns">
+                    {{$guessEntries->links()}}
+                </div>
         @endif
+
     </div>
 
 

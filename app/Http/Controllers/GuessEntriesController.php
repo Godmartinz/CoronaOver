@@ -19,7 +19,7 @@ class GuessEntriesController extends Controller
         }
             // Not sure what this is here for? If you're checking for auth, you'd want to use
             // middleware, not this in the controller
-            return redirect("index")->with('error', 'auth.screen-name');
+
     }
 
     public function create()
@@ -82,17 +82,30 @@ class GuessEntriesController extends Controller
     }
 
 
-    public function index(){
+    public function index()
+    {
 
         \Log::debug('loading the index...');
-
-        $guessEntries = GuessEntries::get();
+        $guessEntries = GuessEntries::simplepaginate();
 
         \Log::debug(print_r($guessEntries, true));
 
         return view('index')->with('guessEntries', $guessEntries);
-
+    }
+    public function fetch(Request $request)
+    {
+        if($request->ajax())
+        {
+            $guessEntries= GuessEntries::simplepaginate();
+            return view('index')->with('guessEntries', $guessEntries)->render();
+        }
 
     }
+    public function oldest() {
+        $guessCountdown = GuessEntries::where('guess_date')->max();
+        $countdown= $guessCountdown->guess_date;
+        return strval($countdown);
+    }
+
 
 }

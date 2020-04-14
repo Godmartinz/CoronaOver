@@ -93,5 +93,28 @@
 
 <!-- neither is this one -->
 <script src="~bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+<script >
+    $(document).ready(function(){
+        $(document).on('click', 'page-link', function(event){
+            event.preventDefault();
+            var page = $(this).attr('href'.split)('page=')[1];
 
+            fetch_data(page);
+        });
+        function fetch_data(page)
+        {
+            var _token =$("input[name=_token]").val();
+                $.ajax({
+                    url:"{{ route('guess.fetch') }}",
+                    method:"POST",
+                    data:{_token:_token, page},
+                    success:function (data)
+                    {
+                        $('#table_data').html(data);
+
+                    }
+                })
+        }
+    });
+</script>
 </html>

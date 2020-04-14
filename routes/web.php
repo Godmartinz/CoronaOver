@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',['as' => 'home','uses' => 'GuessEntriesController@index']);
 Route::post('/guess/create',['as' => 'guess.store','uses' => 'GuessEntriesController@store']);
 Route::get('/guess/{id}',['as' => 'guess.show','uses' => 'GuessEntriesController@show']);
-
+Route::post('/guess/fetch', [ 'as' => 'guess.fetch', 'uses'=> ' GuessEntriesController@fetch']);
 
 
 

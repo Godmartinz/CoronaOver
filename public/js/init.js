@@ -1,14 +1,15 @@
-/*-----------------------------------------------------------------------------------
 /*
-/* Init JS
-/*
------------------------------------------------------------------------------------*/
+/!*-----------------------------------------------------------------------------------
+/!*
+/!* Init JS
+/!*
+-----------------------------------------------------------------------------------*!/
 
 jQuery(document).ready(function($) {
 
-/*---------------------------------------------------- */
-/* Preloader
------------------------------------------------------- */
+/!*---------------------------------------------------- *!/
+/!* Preloader
+------------------------------------------------------ *!/
   	$(window).load(function() {
 
    	// will first fade out the loading animation
@@ -19,9 +20,9 @@ jQuery(document).ready(function($) {
 
   	})
 
-/*---------------------------------------------------- */
-/* Menu
------------------------------------------------------- */
+/!*---------------------------------------------------- *!/
+/!* Menu
+------------------------------------------------------ *!/
   	var toggle_button = $("<a>", {
                         id: "toggle-btn",
                         html : "Menu",
@@ -31,8 +32,8 @@ jQuery(document).ready(function($) {
   	var nav_wrap = $('nav#nav-wrap')
   	var nav = $("ul#nav");
 
-  	/* id JS is enabled, remove the two a.menu-btns
-  	and dynamically prepend a.toggle-btn to #nav-wrap */
+  	/!* id JS is enabled, remove the two a.menu-btns
+  	and dynamically prepend a.toggle-btn to #nav-wrap *!/
   	nav_wrap.find('a.menu-btn').remove();
   	nav_wrap.prepend(toggle_button);
 
@@ -52,16 +53,16 @@ jQuery(document).ready(function($) {
   	});
 
 
-/*----------------------------------------------------*/
-/* Backstretch Settings
------------------------------------------------------- */
+/!*----------------------------------------------------*!/
+/!* Backstretch Settings
+------------------------------------------------------ *!/
 
 	$("#intro").backstretch("/images/header-background.jpg");
 
 
-/*----------------------------------------------------*/
-/*	Back To Top Button
-/*----------------------------------------------------*/
+/!*----------------------------------------------------*!/
+/!*	Back To Top Button
+/!*----------------------------------------------------*!/
 	var pxShow = 300; //height on which the button will show
 	var fadeInTime = 400; //how slow/fast you want the button to show
 	var fadeOutTime = 400; //how slow/fast you want the button to hide
@@ -79,24 +80,24 @@ jQuery(document).ready(function($) {
 	});
 
 
-/*----------------------------------------------------*/
-/*  Placeholder Plugin Settings
------------------------------------------------------- */
-	$('input, textarea').placeholder()
+/!*----------------------------------------------------*!/
+/!*  Placeholder Plugin Settings
+------------------------------------------------------ *!/
+	// $('input, textarea').placeholder()
 
 
-/*----------------------------------------------------*/
-/* FitText Settings
------------------------------------------------------- */
+/!*----------------------------------------------------*!/
+/!* FitText Settings
+------------------------------------------------------ *!/
    setTimeout( function() {
 
 	   $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
 
    }, 100);
 
-/*----------------------------------------------------*/
-/* Final Countdown Settings
------------------------------------------------------- */
+/!*----------------------------------------------------*!/
+/!* Final Countdown Settings
+------------------------------------------------------ *!/
 	var finalDate = '2020/06/20';
 
 	$('div#counter').countdown(finalDate)
@@ -110,9 +111,9 @@ jQuery(document).ready(function($) {
    });
 
 
-/*----------------------------------------------------*/
-/* Smooth Scrolling
------------------------------------------------------- */
+/!*----------------------------------------------------*!/
+/!* Smooth Scrolling
+------------------------------------------------------ *!/
 
    $('.smoothscroll').on('click',function (e) {
 	    e.preventDefault();
@@ -128,9 +129,9 @@ jQuery(document).ready(function($) {
 	});
 
 
-/*----------------------------------------------------*/
-/* Highlight the current section in the navigation bar
-------------------------------------------------------*/
+/!*----------------------------------------------------*!/
+/!* Highlight the current section in the navigation bar
+------------------------------------------------------*!/
 
 	var sections = $("section");
 	var navigation_links = $("#nav-wrap a");
@@ -155,10 +156,10 @@ jQuery(document).ready(function($) {
 	});
 
 
-/*----------------------------------------------------*/
-/*	Make sure that #intro height is
-/* equal to the browser height.
------------------------------------------------------- */
+/!*----------------------------------------------------*!/
+/!*	Make sure that #intro height is
+/!* equal to the browser height.
+------------------------------------------------------ *!/
 
    $('#intro, #map').css({ 'height': $(window).height() });
    $(window).on('resize', function() {
@@ -171,3 +172,4 @@ jQuery(document).ready(function($) {
 
 
 });
+*/
